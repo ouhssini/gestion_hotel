@@ -13,7 +13,7 @@ use Illuminate\Support\Facades\Route;
 
 
 Route::middleware('auth')->group(function () {
-    Route::get('/dashboard', DashboardController::class)->name('dashboard');
+    Route::get('/', DashboardController::class)->name('dashboard');
 
     Route::resource('chambres', ChambreController::class);
     Route::resource('types', TypeController::class)->except('show');
